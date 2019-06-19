@@ -23,6 +23,8 @@ public class HomePage extends CommonAPI {
     WebElement SignIn;
     @FindBy(xpath = "//*[@id=\"twotabsearchtextbox\"]")
     WebElement search;
+    @FindBy(xpath = "//*[@id=\"nav-xshop\"]/a[1]")
+    WebElement deals;
 
     public void setOrders (){
         Orders.click();
@@ -33,6 +35,7 @@ public class HomePage extends CommonAPI {
      }
 
      public void setSignInButton(){
+
         SignInButton.click();
      }
 
@@ -45,6 +48,9 @@ public class HomePage extends CommonAPI {
     public void goToSearch(String watches){
         search.sendKeys(watches);
 
+    }
+    public void setDeals(){
+        deals.click();
     }
 
 

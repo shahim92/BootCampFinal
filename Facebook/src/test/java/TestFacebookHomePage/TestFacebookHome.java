@@ -21,9 +21,20 @@ public class TestFacebookHome extends CommonAPI {
         driver.get(url);
     }
 
-    @Test (enabled = false)
+    @Test
     public void clickOnForgotAccount (){
         home.clickforgetAccount();
         sleepFor(5);
     }
+
+ /*
+    @Test
+    public void clickOnSignUp(){
+        home.setSignUp("sam","ahmad","sam@gmail","sam123");
+        sleepFor(5);
+    }
+
+  */
 }
+
+

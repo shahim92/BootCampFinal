@@ -25,4 +25,9 @@ public class TestCitiBankHome extends CommonAPI {
         home.setCreditCards();
         sleepFor(5);
     }
+    @Test
+    public void ClickOnSearchButton(){
+        home.setSearchInput("Credit Cards");
+
+    }
 }

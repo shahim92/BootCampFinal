@@ -24,26 +24,33 @@ public void init(){
     driver.get(url);
     }
 
-    @Test (enabled = false)
+    @Test
     public void clickOnOrders (){
         home.setOrders();
         sleepFor(5);
     }
-    @Test (enabled = false)
+    @Test
     public void clickOnTryPrime (){
     home.setTryPrime();
     }
-    @Test (enabled = false)
+    @Test
     public void clickOnSignInButton(){
     home.setSignInButton();
     }
-    @Test(enabled = false)
+    @Test
     public void SignInTest(){
     home.goToSingInPage("email.com", "password");
     }
     @Test
     public void clickOnSearch(){
     home.goToSearch("apple watch");
+    sleepFor(5);
+    }
+
+
+    @Test
+    public void clickOnDeals(){
+    home.setDeals();
     sleepFor(5);
     }
 

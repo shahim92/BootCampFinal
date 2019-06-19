@@ -20,10 +20,26 @@ public class TestCNNHome extends CommonAPI {
     public void getback (){
         driver.get(url);
     }
-    @Test (enabled = true)
+   /* @Test
     public void clickOnEntertainment (){
         home.setEntertainment();
         sleepFor(5);
-        driver.get(url);
     }
+
+
+    @Test
+    public void clickOnPolitics(){
+        home.setPolitics();
+        sleepFor(5);
+
+     }
+
+    */
+   @Test
+    public void clickOnSearchBar(){
+       home.setNavigation("Sports news");
+       sleepFor(5);
+   }
+
+
 }

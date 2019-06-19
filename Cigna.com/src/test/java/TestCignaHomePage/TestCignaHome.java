@@ -20,9 +20,17 @@ public class TestCignaHome extends CommonAPI {
     public void getback(){
         driver.get(url);
     }
-    @Test
+   /* @Test
     public void clickOnGlossary(){
         home.setGlossary();
         sleepFor(5);
+    } */
+    @Test
+    public void clickOnSetSearchInput(){
+        home.setSearchinput("Medical tools");
+        sleepFor(5);
+
     }
+
+
 }
