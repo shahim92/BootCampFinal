@@ -9,15 +9,15 @@ import org.openqa.selenium.support.ui.Select;
 public class Homepage extends CommonAPI {
     @FindBy (xpath = "//*[@id=\"login_form\"]/table/tbody/tr[3]/td[2]/div/a")
     WebElement forgotAccount;
-    @FindBy(xpath = "//*[@id=\"u_0_r\"]")
+    @FindBy(name = "firstname")
     WebElement firstName;
-    @FindBy(xpath = "//*[@id=\"u_0_t\"]")
+    @FindBy(name = "lastname")
     WebElement lastName;
-    @FindBy(xpath = "//*[@id=\"u_0_w\"]")
-    WebElement Email;
-    @FindBy (xpath = "//*[@id=\"u_0_13\"]")
-    WebElement Password;
-    @FindBy(xpath = "//*[@id=\"u_0_9\"]")
+    @FindBy(name = "reg_email__")
+    WebElement email;
+    @FindBy(name = "reg_passwd__")
+    WebElement password;
+    @FindBy(name = "sex")
     WebElement Gender;
     @FindBy(xpath = "//*[@id=\"month\"]")
     WebElement MonthButton;
@@ -25,30 +25,33 @@ public class Homepage extends CommonAPI {
     WebElement DayButton;
     @FindBy(xpath = "//*[@id=\"year\"]")
     WebElement YearButton;
-    @FindBy(xpath = "//*[@id=\"u_0_1b\"]")
+    @FindBy(name = "websubmit")
     WebElement SignUp;
 
     public void clickforgetAccount(){
         forgotAccount.click();
     }
 
-    public void setSignUp(String firstname, String lastname, String email, String password){
-        firstName.sendKeys(firstname);
-        lastName.sendKeys(lastname,Keys.ENTER);
-        Email.sendKeys(email,Keys.ENTER);
-        Password.sendKeys(password,Keys.ENTER);
+    public void setSignUp(String Firstname, String Lastname, String Email, String Password) {
+        firstName.sendKeys(Firstname);
+        lastName.sendKeys(Lastname);
+        email.sendKeys(Email);
+        password.sendKeys(Password);
         Select sell = new Select(MonthButton);
         sell.selectByIndex(5);
         Select sell2 = new Select(DayButton);
         sell2.selectByIndex(1);
         Select sell3 = new Select(YearButton);
         sell3.selectByIndex(6);
+        Gender.click();
         SignUp.click();
+        sleepFor(5);
+
+    }
 
 
 
 
 
     }
-}
 
